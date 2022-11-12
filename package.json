@@ -3,13 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-cognito-identity": "^3.165.0",
+    "@aws-sdk/client-comprehend": "^3.165.0",
+    "@aws-sdk/client-ses": "^3.165.0",
+    "@aws-sdk/client-transcribe-streaming": "^3.165.0",
+    "@aws-sdk/client-translate": "^3.165.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.165.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1246.0",
+    "buffer": "^6.0.3",
+    "get-user-media-promise": "^1.1.4",
+    "microphone-stream": "^6.0.1",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "^5.0.1",
+    "stream": "0.0.2",
+    "web-vitals": "^2.1.4",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
+    "react-error-overlay": "^6.0.9",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
