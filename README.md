@@ -1,3 +1,9 @@
+# Requirements:
+You have to provide <b>REGION and IDENTITY_POOL_ID</b> in .env file which you can get after launching stack on AWS.
+#### Command to create an stack is: 
+
+<code>aws cloudformation create-stack --stack-name [PUT_YOUR_STACK_NAME_HERE] --template-body file://setup.yaml --capabilities CAPABILITY_IAM</code>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
