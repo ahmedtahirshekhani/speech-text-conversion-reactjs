@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {startRecording, stopRecording, onRecordPress} from './services/index.js';
+import {startRecording, stopRecording, onRecordPress, textToSpeech} from './services/index.js';
 import {useState, useEffect} from 'react';
 import Process from 'process';
 function App() {
@@ -47,16 +47,20 @@ function App() {
     
     <div className='col-6' >
     <h1>Text to Speech</h1>
+    <div id = "outputSection">
+        <textarea id = "textToConvert"/>
+        <button onClick={()=>textToSpeech()} className="btn-convert">Convert Please!</button>
+        <p id="result">Enter text above then click <b>CONVERT PLEASE!</b></p>
+    </div>
     
-      <div id = "recordButtonContainer">
-          <button id = "record" className = "recordInactive" onClick = {(e)=>onRecordPress(e)}>◉</button>
-      </div>
     </div>
     <div className='col-6'>
     <div id = "outputSection">
-        <div id = "headerText"><h2>Transcription</h2></div>
-        <div id = "transcribedText"></div>
+    <audio id="audioPlayback" controls>
+        <source id="audioSource" type="audio/mp3" src="" />
+    </audio>
     </div>
+    
     </div>
 </div>
     </div>

@@ -11,5 +11,7 @@ Inputs (replace in code):
 - REGION // Amazon region (e.g. us-west-2)
 - IDENTITY_POOL_ID - an Amazon Cognito Identity Pool ID.
 */
-export const REGION = process.env.REGION; 
-export const IDENTITY_POOL_ID =process.env.IDENTITY_POOL_ID;; 
+
+import { AWS_REGION, AWS_IDENTITY_POOL_ID } from "../envconfig.js"
+export const REGION = AWS_REGION; 
+export const IDENTITY_POOL_ID = AWS_IDENTITY_POOL_ID;; 

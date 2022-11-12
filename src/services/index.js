@@ -16,6 +16,7 @@ index.js is part of a tutorial demonstrating how to:
 import * as TranscribeClient from "./transcribeClient.js";
 import * as TranslateClient from "./translateClient.js";
 import * as EmailClient from "./emailClient.js";
+import * as PollyClient from "./polly.js";
 
 const recordButton = document.getElementById("record");
 const inputLanguageList = document.getElementById("inputLanguageList");
@@ -23,6 +24,7 @@ const transcribedText = document.getElementById("transcribedText");
 const translatedText = document.getElementById("translatedText");
 const translationLanguageList = document.getElementById("translationLanguageList");
 const email = document.getElementById("email");
+
 
 const onRecordPress = (e) => {
     if (e.target.getAttribute("class") === "recordInactive") {
@@ -78,6 +80,10 @@ const clearTranscription = () => {
     }
 };
 
-// snippet-end:[transcribe.JavaScript.streaming.indexv3]
+const textToSpeech = async () => {
+  const textToConvert = document.getElementById("textToConvert");
+  const text = textToConvert.value;
+  await PollyClient.textToSpeech(text);
+};
 
-export { startRecording, stopRecording, onTranscriptionDataReceived, onRecordPress};
+export { startRecording, stopRecording, onTranscriptionDataReceived, onRecordPress, textToSpeech};
