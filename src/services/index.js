@@ -14,8 +14,6 @@ index.js is part of a tutorial demonstrating how to:
 
 // snippet-start:[transcribe.JavaScript.streaming.indexv3]
 import * as TranscribeClient from "./transcribeClient.js";
-import * as TranslateClient from "./translateClient.js";
-import * as EmailClient from "./emailClient.js";
 import * as PollyClient from "./polly.js";
 
 const recordButton = document.getElementById("record");
